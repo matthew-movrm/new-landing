@@ -1,1 +1,197 @@
+/* Global Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Brand Colors */
+:root {
+  --pink: #FF2D95;
+  --purple: #FF2DFE;
+  --white: #ffffff;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-family: 'League Spartan';
+  font-size: 1.5rem;
+  color: var(--pink);
+}
+
+.hamburger-menu {
+  position: relative;
+}
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#menu-toggle {
+  display: none;
+}
+.menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: var(--white);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  list-style: none;
+}
+.menu li {
+  padding: 0.5em 1em;
+}
+.menu li a {
+  text-decoration: none;
+  color: #333;
+}
+#menu-toggle:checked + .menu-icon + .menu {
+  display: block;
+}
+
+/* Floating CTA */
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--pink);
+  color: white;
+  padding: 0.75em 1.25em;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+/* Hero */
+.hero {
+  padding: 4em 1em;
+  text-align: center;
+  background: #f9f9f9;
+}
+.hero h1 {
+  color: var(--pink);
+  font-size: 2rem;
+}
+.hero p {
+  margin: 1em 0;
+}
+.full-width {
+  display: block;
+  width: 100%;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 25px;
+  text-align: center;
+  margin-top: 1em;
+}
+.primary {
+  background-color: var(--pink);
+  color: white;
+}
+.secondary {
+  background-color: var(--purple);
+  color: white;
+}
+
+/* Responsive Sections */
+section {
+  padding: 2em 1em;
+}
+.proof-text blockquote {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+.benefits {
+  display: grid;
+  gap: 1em;
+}
+.how-it-works .steps {
+  list-style: none;
+}
+.how-it-works span {
+  padding: 0 0.5em;
+}
+.pricing {
+  display: grid;
+  gap: 1em;
+}
+.pricing-card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.5em;
+  background: #fdfdfd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.faq details {
+  margin: 1em 0;
+}
+.faq summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+.final-cta {
+  text-align: center;
+  background: var(--pink);
+  color: white;
+  padding: 3em 1em;
+}
+.footer {
+  text-align: center;
+  padding: 2em 1em;
+  background: #f1f1f1;
+}
+.social-icons a {
+  margin: 0 0.5em;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .comparison {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .benefits {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .pricing {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
